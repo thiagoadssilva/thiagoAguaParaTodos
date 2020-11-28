@@ -3,7 +3,7 @@
 - A primeira parte desse projeto vai ser o frontend, usando a tecnologia (REACJS)
 
 - Dentro do <b>README</b> da pasta do projeto está tudo que foi ou está sendo usando.
-https://github.com/thiagoadssilva/youtubeClone/blob/main/clone/README.md
+https://github.com/thiagoadssilva/aguaParaTodos/blob/main/frontend/README.md
 
 -  Para visualizar o projeto 
 
@@ -17,4 +17,9 @@ https://github.com/thiagoadssilva/youtubeClone/blob/main/clone/README.md
 ## Finalizado o radaPé e iniciando o laytou dos itens. 
 
 ![Tela Principal](images/inicio02.png)
+<hr>
+
+## Finalizado o laytou dos itens. 
+
+![Tela Principal](images/itens.png)
 <hr>
