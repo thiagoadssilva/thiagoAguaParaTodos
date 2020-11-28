@@ -8,7 +8,16 @@ import {
 export default () =>{
     return(
         <Container>
-             <WaterItem />  
+
+            <WaterItem />  
+            <WaterItem />  
+            <WaterItem />  
+            <WaterItem />  
+            <WaterItem />  
+            <WaterItem />  
+            <WaterItem />  
+            <WaterItem />
+            
         </Container>
     );
 }

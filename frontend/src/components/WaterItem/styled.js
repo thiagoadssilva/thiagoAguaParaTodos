@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width:250px;
     font-family:'Hepta Slab', Helvetica, Arial;
     margin:0 auto 50px auto;
+    width: 25%;
 `;
-export const DivImg = styled.div`
+export const DivImg = styled.img`
     width:200px;
     height:280px;
     background-color:#EEE;
@@ -49,4 +50,5 @@ export const Description = styled.div`
     font-size:13px;
     color:#555;
     margin-top:10px;
+    text-align: center;
 `;

@@ -21,10 +21,10 @@ export default () => {
                 <TextDeveloperBy>Desenvolvido pela Tfcoder</TextDeveloperBy>
             </DivDeveloperBy>
 
-            <DivEmotion>
+            {/* <DivEmotion>
                 <InsertEmoticonIcon />
                 <TextEmotion>brigado Pela Preferência</TextEmotion>
-            </DivEmotion>
+            </DivEmotion> */}
 
 
             <DivNumberCel>

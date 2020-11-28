@@ -1,8 +1,8 @@
 import React from 'react';
+import imagemAgua from '../../assets/images/iaia20.png';
 
 import {
     Container,
-    DivImgAdd,
     DivImg,
     DivAdd,
     Price,
@@ -13,11 +13,11 @@ import {
 export default () => {
     return(
         <Container>
-            <DivImg />
+            <DivImg src={imagemAgua} alt="teste"/>
             <DivAdd>+</DivAdd>
-            <Price>R$ --</Price>
-            <Name>--</Name>
-            <Description>---</Description>
+            <Price>R$ 10.00</Price>
+            <Name>IAIA</Name>
+            <Description>E vós, irmãos, não vos canseis de fazer o bem. (2 Tessalonicenses 3:13)</Description>
         </Container>
     );
 }
