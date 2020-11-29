@@ -53,3 +53,17 @@
 - link para documentação: https://feathericons.com/
 
 <hr>
+
+
+
+### React-feather 
+
+	- yarn add react-addons-css-transition-group --save
+
+- ReactCSSTransitionGroupé uma API de alto nível baseada ReactTransitionGroupe é uma maneira fácil de realizar transições e animações CSS quando um componente React entra ou sai do DOM. É inspirado na excelente biblioteca ng-animate .
+
+- link para documentação: https://pt-br.reactjs.org/docs/animation.html
+
+<hr>
+
+
