@@ -28,3 +28,13 @@ https://github.com/thiagoadssilva/aguaParaTodos/blob/main/frontend/README.md
 
 ![Tela Principal](images/modal.png)
 <hr>
+
+## Iniciando o carrinho de compras.
+
+![Tela Principal](images/carrinho.png)
+<hr>
+
+## Carrinho parte um finalizada.
+
+![Tela Principal](images/carrinhoParteUmFinalizada.png)
+<hr>
