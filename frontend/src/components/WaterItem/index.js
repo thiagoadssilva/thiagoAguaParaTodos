@@ -20,7 +20,7 @@ export default () => {
             <Price>R$ 10.00</Price>
             <Name>IAIA</Name>
             <Description>E vós, irmãos, não vos canseis de fazer o bem. (2 Tessalonicenses 3:13)</Description>
-
+            
             <ModalItem openModal={openModal} setOpenModal={setOpenModal}/>
         </Container>
     );
