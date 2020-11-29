@@ -1,15 +1,18 @@
 import React from 'react';
 import WaterItem from '../../components/WaterItem';
+import Aside from '../../components/Aside';
+
 
 import {
     Container,
-    Teste
+    Div
 } from './styled';
 
 export default () =>{
     return(
         <Container>            
-            <Teste>
+           
+            <Div>
                 <WaterItem />  
                 <WaterItem />  
                 <WaterItem />  
@@ -21,7 +24,11 @@ export default () =>{
                 <WaterItem />  
                 <WaterItem />  
                 <WaterItem />  
-            </Teste>
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+            </Div>
+            <Aside />
         </Container>
     );
 }

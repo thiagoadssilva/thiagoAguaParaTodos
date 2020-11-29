@@ -8,20 +8,10 @@ export const Container = styled.div`
     font-family:'Hepta Slab', Helvetica, Arial;
     margin:0 auto 50px auto;
     width: 30%;
-
-    .anim-appear {
-       opacity: 0.01;
-    }
-    
-    .anim-appear.anim-appear-active{
-        opacity: 2;
-        transition:all ease 0.5s;
-    }
-
 `;
 export const DivImg = styled.img`
     width:200px;
-    height:280px;
+    height:350px;
     background-color:#EEE;
     border-radius:30px;
     box-shadow:0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -46,7 +36,7 @@ export const DivAdd = styled.div`
     }
 `;
 export const Price = styled.div`
-    font-size:20px;
+    font-size: 20px;
     color:#333;
     margin-top:5px;
 `;
@@ -59,8 +49,7 @@ export const Name = styled.div`
 export const Description = styled.div`
     font-size:13px;
     color:#555;
-    margin-top:10px;
     text-align: center;
-    width: 300px;
+    width: 200px;
 `;
 

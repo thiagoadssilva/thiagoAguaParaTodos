@@ -14,8 +14,6 @@ import {
 export default () => {
     const [openModal, setOpenModal] = useState(false);
 
-  
-
     return(
         <Container>
             <DivImg onClick={() => setOpenModal(true)} src={imagemAgua} alt="teste"/>

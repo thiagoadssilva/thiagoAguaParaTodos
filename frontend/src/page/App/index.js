@@ -12,8 +12,8 @@ export default () =>{
     return(
         <Container>
             <Main />
-            <Modells />
-            <RodaPe />
+            <Modells />            
+            <RodaPe />                    
         </Container>
     );
 }
