@@ -7,7 +7,17 @@ export const Container = styled.div`
     align-items: center;
     font-family:'Hepta Slab', Helvetica, Arial;
     margin:0 auto 50px auto;
-    width: 25%;
+    width: 30%;
+
+    .anim-appear {
+       opacity: 0.01;
+    }
+    
+    .anim-appear.anim-appear-active{
+        opacity: 2;
+        transition:all ease 0.5s;
+    }
+
 `;
 export const DivImg = styled.img`
     width:200px;
@@ -29,7 +39,7 @@ export const DivAdd = styled.div`
     font-size:22px;
     cursor: pointer;
     margin-top:-25px;
-    transition:all ease .2s;
+    transition:all ease 0.2s;
 
     :hover{
         background-color:#244c88;
@@ -51,4 +61,6 @@ export const Description = styled.div`
     color:#555;
     margin-top:10px;
     text-align: center;
+    width: 300px;
 `;
+

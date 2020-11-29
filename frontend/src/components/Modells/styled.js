@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
+    //width: 100vw;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
     background-color: #EEEEEE;
-    height: 100%;
+`;
+
+export const Teste = styled.div`
+    display: flex;
+    flex-wrap: wrap;
 `;

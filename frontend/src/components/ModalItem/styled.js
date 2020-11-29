@@ -8,8 +8,9 @@ export const Container = styled.div`
     right:0;
     background-color:rgba(255, 255, 255, 0.5);
     display: ${props => props.openModal ? '' : 'none'};
-    
     overflow-y:auto;
+    //transition: all ease .10s;
+    
 `;
 export const DivWaterImg = styled.div`
     flex:1;
@@ -20,18 +21,20 @@ export const DivWaterImg = styled.div`
 export const DivImg = styled.img`
     width:200px;
     height:280px;
+    
     //background-color:#EEE;
     //border-radius:30px;
     //box-shadow:0px 0px 20px rgba(0, 0, 0, 0.2);
 `;
 export const DivBody = styled.div`
-    width:900px;
+    transition: all ease .10s;
+    width:733px;
     background-color:#FFF;
     border-radius:10px;
     box-shadow:0px 0px 15px #999;
     display:flex;
-    margin:20px 0px;
-    padding:20px;
+    //margin:20px 0px;
+    //padding:20px;
     margin:0;
 `;
 export const DivWaterInfo = styled.div`
@@ -96,6 +99,8 @@ export const DivButtonCart = styled.button`
     cursor:pointer;
     margin-right:30px;
     border: 0px;
+    transition: all ease .2s;
+    
 
     :hover{
         background-color:#32a345;
@@ -111,6 +116,7 @@ export const DivButtonCancel = styled.button`
     cursor:pointer;
     margin-right:30px;
     border: 0px;
+    transition: all ease .2s;
 
     :hover{
         background-color:#93363e;
@@ -121,6 +127,8 @@ export const DivPaiCenter = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all ease .10s;
+    
 `;
 export const DivButtonCancelMobile = styled.button`
     display: none;

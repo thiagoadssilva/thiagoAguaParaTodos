@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import imagemAgua from '../../assets/images/iaia20.png';
 import ControlPointIcon from '@material-ui/icons/ControlPoint';
@@ -27,8 +27,19 @@ import {
 }from './styled.js';
 
 export default ({openModal, setOpenModal}) =>{
+    const [addSubtract ,setAddSubtract] = useState(1);
+
+    useEffect(() =>{
+        if(addSubtract <= 0){
+            setOpenModal(false); 
+        }
+        if(openModal === false){
+            setAddSubtract(1) ;
+        }
+    },[addSubtract, openModal]);
+
     return(
-        <Container openModal={openModal}>
+        <Container openModal={openModal}>           
             <DivPaiCenter>
                 <DivBody>
                     <DivButtonCancelMobile>Voltar</DivButtonCancelMobile>
@@ -43,11 +54,11 @@ export default ({openModal, setOpenModal}) =>{
                             <Price>
                                 <PriceActual>R$ 20.00</PriceActual>
                                 <DivQtd>
-                                    <DivSubtract>
+                                    <DivSubtract onClick={() => setAddSubtract(addSubtract - 1)}>
                                         <RemoveCircleOutlineIcon  />
                                     </DivSubtract>
-                                    <Qtd>1</Qtd>
-                                    <DivPlus>
+                                    <Qtd>{addSubtract}</Qtd>
+                                    <DivPlus onClick={() => setAddSubtract(addSubtract + 1)}>
                                         <ControlPointIcon />
                                     </DivPlus>
                                 </DivQtd>

@@ -2,23 +2,26 @@ import React from 'react';
 import WaterItem from '../../components/WaterItem';
 
 import {
-    Container
+    Container,
+    Teste
 } from './styled';
 
 export default () =>{
     return(
-        <Container>
-
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            <WaterItem />  
-            
+        <Container>            
+            <Teste>
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+                <WaterItem />  
+            </Teste>
         </Container>
     );
 }
