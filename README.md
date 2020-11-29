@@ -23,3 +23,8 @@ https://github.com/thiagoadssilva/aguaParaTodos/blob/main/frontend/README.md
 
 ![Tela Principal](images/itens.png)
 <hr>
+
+## Finalizado o modal. 
+
+![Tela Principal](images/modal.png)
+<hr>
