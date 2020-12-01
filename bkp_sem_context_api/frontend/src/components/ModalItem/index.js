@@ -1,11 +1,8 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import imagemAgua from '../../assets/images/iaia20.png';
 import ControlPointIcon from '@material-ui/icons/ControlPoint';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
-
-import {Context} from '../../Context/OpenModalAside';
-
 
 import {
     Container,
@@ -29,9 +26,8 @@ import {
     DivButtonCancelMobile
 }from './styled.js';
 
- export default ({openModal, setOpenModal}) =>{
+export default ({openModal, setOpenModal}) =>{
     const [addSubtract ,setAddSubtract] = useState(1);
-    const {openAside} = useContext(Context);
 
     useEffect(() =>{
         if(addSubtract <= 0){
@@ -68,7 +64,7 @@ import {
                                 </DivQtd>
                             </Price>
                         </DivPrice>
-                        <DivButtonCart onClick={() => openAside()}>Adicionar ao carrinho</DivButtonCart>
+                        <DivButtonCart onClick={() => setOpenModal(true)}>Adicionar ao carrinho</DivButtonCart>
                         <DivButtonCancel onClick={() => setOpenModal(false)}>Cancelar</DivButtonCancel>
                     </DivWaterInfo>
                 </DivBody>

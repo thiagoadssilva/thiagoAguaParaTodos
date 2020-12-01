@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import imagemAgua from '../../assets/images/iaia20.png';
 import ModalItem from '../../components/ModalItem';
 

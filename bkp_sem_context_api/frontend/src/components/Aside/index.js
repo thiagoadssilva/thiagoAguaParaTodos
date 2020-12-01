@@ -1,9 +1,7 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState} from 'react';
 import ControlPointIcon from '@material-ui/icons/ControlPoint';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 import imagemAgua from '../../assets/images/iaia20.png';
-
-import {Context} from '../../Context/OpenModalAside';
 
 import { 
     Container,
@@ -29,20 +27,8 @@ import {
 } from './styled';
 
 export default () => {
-    const [addSubtract ,setAddSubtract] = useState(0);
-    const {open, closeAside} = useContext(Context);
+    const [addSubtract ,setAddSubtract] = useState(1);
 
-    /** INICIO - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
-    useEffect(() => {
-        if(open > 0){
-            setAddSubtract(1);
-        }
-        if(addSubtract == 0){
-            closeAside(0);
-        }
-    }, [open]);
-    /** FIM - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
-    
     return(
         <Container addSubtract={addSubtract}>
             <CartArea >
