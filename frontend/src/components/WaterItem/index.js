@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import imagemAgua from '../../assets/images/iaia20.png';
 import ModalItem from '../../components/ModalItem';
 
 import {
@@ -11,16 +10,16 @@ import {
     Description
 }from './styled';
 
-export default () => {
+export default (props) => {
     const [openModal, setOpenModal] = useState(false);
 
     return(
         <Container>
-            <DivImg onClick={() => setOpenModal(true)} src={imagemAgua} alt="teste"/>
+            <DivImg onClick={() => setOpenModal(true)} src={props.data.imagem} alt=""/>
             <DivAdd onClick={() => setOpenModal(true)}>+</DivAdd>
-            <Price>R$ 10.00</Price>
-            <Name>IAIA</Name>
-            <Description>E vós, irmãos, não vos canseis de fazer o bem. (2 Tessalonicenses 3:13)</Description>
+            <Price>R$ {props.data.valor}</Price>
+            <Name>{props.data.nome}</Name>
+            <Description>{props.data.descricao}</Description>
             <ModalItem openModal={openModal} setOpenModal={setOpenModal}/>
         </Container>
     );
