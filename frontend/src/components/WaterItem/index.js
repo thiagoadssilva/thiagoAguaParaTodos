@@ -20,7 +20,7 @@ export default (props) => {
             <Price>R$ {props.data.valor}</Price>
             <Name>{props.data.nome}</Name>
             <Description>{props.data.descricao}</Description>
-            <ModalItem openModal={openModal} setOpenModal={setOpenModal}/>
+            <ModalItem openModal={openModal} setOpenModal={setOpenModal} props={props}/>
         </Container>
     );
 }

@@ -36,5 +36,6 @@ https://github.com/thiagoadssilva/aguaParaTodos/blob/main/frontend/README.md
 
 ## Carrinho parte um finalizada.
 
-![Tela Principal](images/carrinhoParteUmFinalizada.png)
+![Tela Principal](images/parteUmCarrinho.png)
 <hr>
+

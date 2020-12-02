@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 export const DivImg = styled.img`
     width:200px;
-    height:350px;
+    height:300px;
     background-color:#EEE;
     border-radius:30px;
     box-shadow:0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -50,6 +50,6 @@ export const Description = styled.div`
     font-size:13px;
     color:#555;
     text-align: center;
-    width: 200px;
+    width: 300px;
 `;
 

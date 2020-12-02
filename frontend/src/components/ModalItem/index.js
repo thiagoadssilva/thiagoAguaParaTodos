@@ -29,7 +29,7 @@ import {
     DivButtonCancelMobile
 }from './styled.js';
 
- export default ({openModal, setOpenModal}) =>{
+ export default ({openModal, setOpenModal, props}) =>{
     const [addSubtract ,setAddSubtract] = useState(1);
     const {openAside} = useContext(Context);
 
@@ -48,15 +48,15 @@ import {
                 <DivBody>
                     <DivButtonCancelMobile>Voltar</DivButtonCancelMobile>
                     <DivWaterImg>
-                        <DivImg src={imagemAgua} alt=""/>
+                        <DivImg src={props.data.imagem} alt=""/>
                     </DivWaterImg>
                     <DivWaterInfo>
-                        <DivTitle>Noana - (20 Litros)</DivTitle>
-                        <DivDescription>Pois tu, Senhor, abençoas o justo e, como escudo, o cercas da tua benevolência. - Salmos, 5:12</DivDescription>
+                        <DivTitle>{props.data.nome}</DivTitle>
+                        <DivDescription>{props.data.descricao}</DivDescription>
                         <DivPrice>
                             <DivLabelPrice>Preço</DivLabelPrice>
                             <Price>
-                                <PriceActual>R$ 20.00</PriceActual>
+                                <PriceActual>R$ {props.data.valor}</PriceActual>
                                 <DivQtd>
                                     <DivSubtract onClick={() => setAddSubtract(addSubtract - 1)}>
                                         <RemoveCircleOutlineIcon  />
@@ -68,7 +68,7 @@ import {
                                 </DivQtd>
                             </Price>
                         </DivPrice>
-                        <DivButtonCart onClick={() => openAside()}>Adicionar ao carrinho</DivButtonCart>
+                        <DivButtonCart onClick={() => openAside(props, addSubtract)}>Adicionar ao carrinho</DivButtonCart>
                         <DivButtonCancel onClick={() => setOpenModal(false)}>Cancelar</DivButtonCancel>
                     </DivWaterInfo>
                 </DivBody>

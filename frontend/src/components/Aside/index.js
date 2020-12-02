@@ -30,7 +30,8 @@ import {
 
 export default () => {
     const [addSubtract ,setAddSubtract] = useState(0);
-    const {open, closeAside} = useContext(Context);
+    const [addTotal, setAddTotal] = useState(0);
+    const {open, closeAside, dataProduct} = useContext(Context);
 
     /** INICIO - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
     useEffect(() => {
@@ -40,17 +41,25 @@ export default () => {
         if(addSubtract == 0){
             closeAside(0);
         }
-    }, [open]);
+        setAddSubtract(dataProduct.quantidade); 
+        setAddTotal(dataProduct.quantidade * dataProduct.valor);      
+    }, [open, dataProduct.quantidade]);
     /** FIM - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
-    
+
+    useEffect(() => {
+        setAddTotal(addSubtract * dataProduct.valor);      
+    },[addSubtract])
+
+
+
     return(
         <Container addSubtract={addSubtract}>
             <CartArea >
                 <CartTitle>Suas Aguas</CartTitle>
                 <CartWaters>
                     <DivAreaImg>
-                        <DivImg src={imagemAgua} alt=""/>
-                        <DivName>IAIA (20 litro)</DivName>
+                        <DivImg src={dataProduct.imagem} alt=""/>
+                        <DivName>{dataProduct.nome}</DivName>
                         <DivQtd>
                             <DivSubtract onClick={() => setAddSubtract(addSubtract - 1)}>
                                 <RemoveCircleOutlineIcon  />
@@ -66,11 +75,11 @@ export default () => {
                     <DivTotal>
                         <CartItemTotalSubtotal>
                             <SubTotal>SubTotal</SubTotal>
-                            <ValorSubTotal>R$ 100.00</ValorSubTotal>
+                            <ValorSubTotal>R$ {dataProduct.valor}</ValorSubTotal>
                         </CartItemTotalSubtotal>
                         <CartTotalItemBigTotal>
                             <TotalBig>Total</TotalBig>
-                            <TotalBigValor>R$ 200.00</TotalBigValor>
+                            <TotalBigValor>R$ {addTotal}</TotalBigValor>
                         </CartTotalItemBigTotal>
                     </DivTotal>
                     <CartButtonCheckOut>Finalizar Compra</CartButtonCheckOut>

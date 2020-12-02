@@ -21,10 +21,6 @@ export const DivWaterImg = styled.div`
 export const DivImg = styled.img`
     width:200px;
     height:280px;
-    
-    //background-color:#EEE;
-    //border-radius:30px;
-    //box-shadow:0px 0px 20px rgba(0, 0, 0, 0.2);
 `;
 export const DivBody = styled.div`
     transition: all ease .10s;
@@ -33,8 +29,6 @@ export const DivBody = styled.div`
     border-radius:10px;
     box-shadow:0px 0px 15px #999;
     display:flex;
-    //margin:20px 0px;
-    //padding:20px;
     margin:0;
 `;
 export const DivWaterInfo = styled.div`
@@ -127,7 +121,6 @@ export const DivPaiCenter = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all ease .10s;
     
 `;
 export const DivButtonCancelMobile = styled.button`
