@@ -56,7 +56,7 @@
 
 
 
-### React-feather 
+### transition-group
 
 	- yarn add react-addons-css-transition-group --save
 

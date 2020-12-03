@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
 
-import imagemAgua from '../../assets/images/iaia20.png';
 import ControlPointIcon from '@material-ui/icons/ControlPoint';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 
@@ -56,7 +55,7 @@ import {
                         <DivPrice>
                             <DivLabelPrice>Preço</DivLabelPrice>
                             <Price>
-                                <PriceActual>R$ {props.data.valor}</PriceActual>
+                                <PriceActual>R$ {parseFloat(props.data.valor).toFixed(2)}</PriceActual>
                                 <DivQtd>
                                     <DivSubtract onClick={() => setAddSubtract(addSubtract - 1)}>
                                         <RemoveCircleOutlineIcon  />
@@ -68,7 +67,7 @@ import {
                                 </DivQtd>
                             </Price>
                         </DivPrice>
-                        <DivButtonCart onClick={() => openAside(props, addSubtract)}>Adicionar ao carrinho</DivButtonCart>
+                        <DivButtonCart onClick={() => openAside(props, addSubtract, setOpenModal(false))}>Adicionar ao carrinho</DivButtonCart>
                         <DivButtonCancel onClick={() => setOpenModal(false)}>Cancelar</DivButtonCancel>
                     </DivWaterInfo>
                 </DivBody>

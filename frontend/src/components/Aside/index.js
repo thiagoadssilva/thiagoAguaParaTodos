@@ -29,10 +29,11 @@ import {
 } from './styled';
 
 export default () => {
+    const {open, closeAside, dataProduct} = useContext(Context);
     const [addSubtract ,setAddSubtract] = useState(0);
     const [addTotal, setAddTotal] = useState(0);
-    const {open, closeAside, dataProduct} = useContext(Context);
-
+    
+    console.log(open);
     /** INICIO - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
     useEffect(() => {
         if(open > 0){
@@ -47,6 +48,7 @@ export default () => {
     /** FIM - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
 
     useEffect(() => {
+        
         setAddTotal(addSubtract * dataProduct.valor);      
     },[addSubtract])
 
@@ -75,11 +77,11 @@ export default () => {
                     <DivTotal>
                         <CartItemTotalSubtotal>
                             <SubTotal>SubTotal</SubTotal>
-                            <ValorSubTotal>R$ {dataProduct.valor}</ValorSubTotal>
+                            <ValorSubTotal>R$ {parseFloat(dataProduct.valor).toFixed(2)}</ValorSubTotal>
                         </CartItemTotalSubtotal>
                         <CartTotalItemBigTotal>
                             <TotalBig>Total</TotalBig>
-                            <TotalBigValor>R$ {addTotal}</TotalBigValor>
+                            <TotalBigValor>R$ {parseFloat(addTotal).toFixed(2)}</TotalBigValor>
                         </CartTotalItemBigTotal>
                     </DivTotal>
                     <CartButtonCheckOut>Finalizar Compra</CartButtonCheckOut>

@@ -21,6 +21,7 @@ function OpenProvider({children}){
     function closeAside(){
         setOpen(0);
     }
+   
 
     return(
         <Context.Provider value={{open, openAside, closeAside, setDataProduct, dataProduct}}>

@@ -10,7 +10,31 @@ export const Container = styled.div`
     display: ${props => props.openModal ? '' : 'none'};
     overflow-y:auto;
     //transition: all ease .10s;
-    
+    .SlideIn-appear.SlideIn-appear-active {
+        opacity: 1;
+        transform: translateX(0);;
+        transition: all 0.6s linear;
+    }
+    .SlideIn-enter {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    .SlideIn-enter.SlideIn-enter-active {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.2s linear 0.4s;
+    }
+    .SlideIn-leave {
+        opacity: 1.0;
+        transform: translateX(0);
+    }
+    .SlideIn-leave.SlideIn-leave-active {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translateX(-30px);
+        transition: all 0.2s linear;
+    }
 `;
 export const DivWaterImg = styled.div`
     flex:1;
