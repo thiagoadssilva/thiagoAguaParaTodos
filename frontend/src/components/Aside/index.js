@@ -1,7 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react';
 import ControlPointIcon from '@material-ui/icons/ControlPoint';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
-import imagemAgua from '../../assets/images/iaia20.png';
 
 import {Context} from '../../Context/OpenModalAside';
 
@@ -29,33 +28,27 @@ import {
 } from './styled';
 
 export default () => {
-    const {open, closeAside, dataProduct} = useContext(Context);
+    const {open, dataProduct, controlAsideClose, setControlAsideClose} = useContext(Context);
     const [addSubtract ,setAddSubtract] = useState(0);
     const [addTotal, setAddTotal] = useState(0);
-    
-    console.log(open);
+
     /** INICIO - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
-    useEffect(() => {
-        if(open > 0){
-            setAddSubtract(1);
-        }
-        if(addSubtract == 0){
-            closeAside(0);
-        }
+    useEffect(() => {      
+        setAddSubtract(open);
         setAddSubtract(dataProduct.quantidade); 
         setAddTotal(dataProduct.quantidade * dataProduct.valor);      
-    }, [open, dataProduct.quantidade]);
+    }, [open, dataProduct.quantidade, controlAsideClose]);
     /** FIM - useEffect responsável por fechar e abrir o aside conforme a quantidade de itens */
 
     useEffect(() => {
-        
-        setAddTotal(addSubtract * dataProduct.valor);      
+        setAddTotal(addSubtract * dataProduct.valor);
+        if(addSubtract == 0){
+            setControlAsideClose('none');
+        }
     },[addSubtract])
 
-
-
     return(
-        <Container addSubtract={addSubtract}>
+        <Container controlAsideClose={controlAsideClose}>
             <CartArea >
                 <CartTitle>Suas Aguas</CartTitle>
                 <CartWaters>

@@ -29,7 +29,7 @@ import {
 }from './styled.js';
 
  export default ({openModal, setOpenModal, props}) =>{
-    const [addSubtract ,setAddSubtract] = useState(1);
+    const [addSubtract ,setAddSubtract] = useState(0);
     const {openAside} = useContext(Context);
 
     useEffect(() =>{
@@ -40,6 +40,10 @@ import {
             setAddSubtract(1) ;
         }
     },[addSubtract, openModal]);
+
+    function handlOpenAside(){
+        openAside(props, addSubtract, setOpenModal(false));
+    }
 
     return(
         <Container openModal={openModal}>           
@@ -67,7 +71,7 @@ import {
                                 </DivQtd>
                             </Price>
                         </DivPrice>
-                        <DivButtonCart onClick={() => openAside(props, addSubtract, setOpenModal(false))}>Adicionar ao carrinho</DivButtonCart>
+                        <DivButtonCart onClick={() => handlOpenAside()}>Adicionar ao carrinho</DivButtonCart>
                         <DivButtonCancel onClick={() => setOpenModal(false)}>Cancelar</DivButtonCancel>
                     </DivWaterInfo>
                 </DivBody>

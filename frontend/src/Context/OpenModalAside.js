@@ -5,11 +5,10 @@ const Context = createContext();
 function OpenProvider({children}){
     const [open, setOpen] = useState(0);
     const [dataProduct, setDataProduct] = useState([]);
+    const [controlAsideClose, setControlAsideClose] = useState('none');
     let arrayItens = [];
 
     function openAside(props, addSubtract){
-        setOpen(1);
-        
         arrayItens['id'] = props.data.id;
         arrayItens['nome'] = props.data.nome;
         arrayItens['descricao'] = props.data.descricao;
@@ -17,14 +16,12 @@ function OpenProvider({children}){
         arrayItens['valor'] = props.data.valor;
         arrayItens['quantidade'] = addSubtract;
         setDataProduct(arrayItens);
+        setOpen(1);
+        setControlAsideClose('block');
     }
-    function closeAside(){
-        setOpen(0);
-    }
-   
 
     return(
-        <Context.Provider value={{open, openAside, closeAside, setDataProduct, dataProduct}}>
+        <Context.Provider value={{open, openAside, setDataProduct, dataProduct, controlAsideClose, setControlAsideClose}}>
             {children}
         </Context.Provider>
     );

@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background-color:#9ccbe6;
-    width: ${props => props.addSubtract > 0 ? '100vw' : '0vw'}; //100vw;
+    //width: ${props => props.addSubtract >= 1 ? '100vw' : '0vw'}; //100vw;
+    width: 100vw;
     font-family:'Hepta Slab', Helvetica, Arial;
     transition:all ease 0.3s;
     overflow-x:hidden;
-   
+    display: ${props => props.controlAsideClose == 'block' ? 'block' : 'none'};
 `;
 export const CartArea = styled.div`
     //width: 100%;
